@@ -42,9 +42,24 @@ async def on_raw_reaction_add(payload):
 		role = discord.utils.get(guild.roles, name='Гость-торговец')
 		await payload.member.edit(roles=[])
 		await payload.member.add_roles(role)
-		
-client.run("Тoken")
 
+	if payload.message_id == 938730667318059008 and reaction.emoji == '🦴':
+		role = discord.utils.get(guild.roles, name='Day R')
+		await payload.member.add_roles(role)
+
+	if payload.message_id == 938730667318059008 and reaction.emoji == '🧟':
+		role = discord.utils.get(guild.roles, name='Last Day')
+		await payload.member.add_roles(role)
+
+	if payload.message_id == 938730667318059008 and reaction.emoji == '🌳':
+		role = discord.utils.get(guild.roles, name='Minecraft')
+		await payload.member.add_roles(role)
+
+	if payload.message_id == 938730667318059008 and reaction.emoji == '👾':
+		role = discord.utils.get(guild.roles, name='Soul Knait')
+		await payload.member.add_roles(role)
+		
+client.run("token")
 '''
 0-5 дух
 6-10 рядовой
